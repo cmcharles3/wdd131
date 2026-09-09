@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131: Dynamic Web Fundamentals-Charles Chiparo</title>
+    <meta name="description" content="Charles Chiparo's WDD 131: Dynamic Web Fundamentals course website.">
+    <meta name="author" content="Charles Chiparo">  
+    <link rel="stylesheet" href="styles/base.css">  
+    <script src="scripts/getdates.js" defer></script>  
+
+</head>
+<body>
+    <header>
+        <span id="course-title">WDD 131: Dynamic Web Fundamentals
+            <nav>
+
+                <a href="https://www.linkedin.com/in/charles-chiparo/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/charles-chiparo" target="_blank">GitHub</a>
+                <a href="https://byu.instructure.com/" target="_blank">Canvas</a>
+                <a href="#" target="_blank" rel="noopener">Final Project</a>
+                
+            </nav>
+        </span>
+    </header>
+    <main>
+        <h1>Charles Chiparo</h1>
+        <section class="card">
+            <h2>About Me</h2>
+            <img src="images/profile.jpg" alt="Charles Chiparo" class="profile-image">
+            <p>My name is Charles Chiparo, I am a web developer and designer.
+        </section>
+        <section class="card">
+            <h2>My Skills</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Responsive Design</li>
+                <li>Front-end Development</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Charles Chiparo. All rights reserved.</p>    
+    
+</body>
+</html>
