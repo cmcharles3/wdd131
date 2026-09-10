@@ -1,54 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131: Dynamic Web Fundamentals-Charles Chiparo</title>
-    <meta name="description" content="Charles Chiparo's WDD 131: Dynamic Web Fundamentals course website featuring professional background, skills, and course project links.">
+    <meta name="description"
+        content="Charles Chiparo's WDD 131: Dynamic Web Fundamentals course website featuring professional background, skills, and course project links.">
     <meta name="author" content="Charles Chiparo">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="styles/base.css">  
-    <script src="scripts/getdates.js" defer></script>  
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
+
 <body>
     <header>
-        <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+        <h1>WDD 131: Dynamic Web Fundamentals</h1>
         <nav>
-            <a href="https://www.linkedin.com/in/charles-chiparo/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://github.com/charles-chiparo" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://byu.instructure.com/" target="_blank" rel="noopener">Canvas</a>
-            <a href="#" target="_blank" rel="noopener">Final Project</a>
-            <a href="https://www.byu.edu/" target="_blank" rel="noopener">BYU</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://github.com/cmcharles3" target="_blank">GitHub</a>
+            <a href="https://byui.instructure.com" target="_blank">Canvas</a>
+            <a href="#" target="_blank">Final Project</a>
+            <a href="https://byui.edu" target="_blank">BYU</a>
         </nav>
     </header>
-    
-    <main>
-        <h1>Charles Chiparo</h1>
-        
-        <section class="card">
-            <h2>About Me</h2>
-            <img src="images/profile.jpg" alt="Portrait of Charles Chiparo" width="200" height="200" loading="lazy">
-            <p>My name is Charles Chiparo, I am a web developer and designer, residing in South Africa, Gauteng Province. I enjoy designing clean, modern websites that provide an excellent user experience.</p>
-        </section>
 
-        <section class="card">
-            <h2>My Skills</h2>
-            <ul class="skills-list">
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>Responsive Design</li>
-                <li>Front-end Development</li>
-            </ul>
-        </section>
+    <main>
+        <h2>Charles Chiparo</h2>
+
+        <div class="grid-container">
+            <!-- Left Card: About Me -->
+            <section class="card about-card">
+                <div class="card-header">
+                    <h3>About Me</h3>
+                </div>
+                <div class="card-content">
+                    <div class="about-top">
+                        <p>My name is Charles Chiparo. I am a web developer and designer, residing in South Africa,
+                            Gauteng Province. I enjoy designing clean, modern websites that provide an excellent user
+                            experience.</p>
+                        <img src="images/profile.jpg" alt="Charles Chiparo" class="profile-img">
+                    </div>
+
+                    <div class="sub-section">
+                        <h4>Gauteng, South Africa</h4>
+                        <div class="sub-section-content">
+                            <img src="images/flag.png" alt="Official Flag of South Africa" class="flag-img">
+                            <p>South Africa is located at the southern tip of the African continent. Gauteng is the
+                                economic hub of the country, known for its vibrant culture, rich history, and modern
+                                technology sectors.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Card: Web Dev Resources / Skills -->
+            <section class="card skills-card">
+                <div class="card-header">
+                    <h3>Web Dev Resources</h3>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+                        <li><a href="https://www.smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
+                        <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
+                        <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                        <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
+
+                    </ul>
+                </div>
+            </section>
+        </div>
     </main>
-    
-    <footer>
-        <p>&copy;<span id="currentyear"></span> 🌺 Charles Chiparo 🌺 South Africa</p>
-        <p>Last Updated: <span id="lastModified"></span></p> 
-          
-    </footer>
+
+
 </body>
+
+</html>
+
+<footer>
+    <p>&copy;<span id="currentyear"></span> 🌺 Charles Chiparo 🌺 South Africa</p>
+    <p>Last Updated: <span id="lastModified"></span></p>
+
+</footer>
+</body>
+
 </html
