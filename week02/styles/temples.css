@@ -48,11 +48,11 @@ header h1 {
 }
 
 #menu::before {
-    content: "☰";
+    content: "\2630"; /* \2630 Replacing the raw "☰" */
 }
 
 #menu.open::before {
-    content: "❌";
+    content: "\274C"; /* \274C Replacing the raw "❌" */
 }
 
 /* Navigation Menu */
