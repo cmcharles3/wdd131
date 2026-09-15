@@ -1,0 +1,37 @@
+@media screen and (min-width: 650px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding: 1rem 3rem;
+    }
+
+    /* Hide Hamburger Button */
+    #menu {
+        display: none;
+    }
+
+    /* Horizontal Nav Bar */
+    .navigation {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: auto;
+        gap: 1.5rem;
+    }
+
+    .navigation a {
+        display: inline-block;
+        padding: 0.5rem 0;
+    }
+
+    /* Multi-column Grid Layout */
+    .res-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    figure {
+        max-width: 100%;
+    }
+}

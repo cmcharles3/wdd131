@@ -1,0 +1,140 @@
+/* Mobile View */
+:root {
+    --primary-color: #38005b;
+    --text-color: #333333;
+    --caption-color: #38005b;
+    --font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: #ffffff;
+}
+
+/* Header & Hamburger Button */
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #ffffff;
+
+}
+
+#menu {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❌";
+}
+
+/* Navigation Menu */
+.navigation {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.navigation a {
+    display: none;
+    padding: 0.75rem 1rem;
+    color: #ffffff !important;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navigation.open a {
+    display: block;
+}
+
+/* Main Layout & CSS Grid */
+main {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+    color: 000000;
+}
+
+.res-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+figure {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    color: var(--caption-color);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
