@@ -1,4 +1,4 @@
-// Dynamic Copyright Year
+// Dynamic Copyright Year.
 const currentYearSpan = document.querySelector("#currentyear");
 if (currentYearSpan) {
     currentYearSpan.textContent = new Date().getFullYear();
