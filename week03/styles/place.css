@@ -1,0 +1,151 @@
+:root {
+    --main-bg-color: #007749; /* South African Green */
+    --accent-color: #FFB81C; /* Gold/Yellow */
+    --text-light: #ffffff;
+    --text-dark: #000000;
+    --box-bg-translucent: rgba(255, 255, 255, 0.88);
+    --font-main: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-color);
+    color: var(--text-dark);
+}
+
+/* Header */
+header {
+    background-color: var(--main-bg-color);
+    color: var(--text-light);
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 4px solid var(--accent-color);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Main content area */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px 0;
+}
+
+/* Hero Container */
+.hero-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* --- Floating Info Boxes --- */
+
+.info-box {
+    position: absolute;
+    background-color: var(--box-bg-translucent);
+    backdrop-filter: blur(2px);
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    width: 230px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.box-title {
+    background-color: var(--main-bg-color);
+    color: var(--text-light);
+    padding: 8px 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.box-content {
+    padding: 10px 12px;
+}
+
+.box-content p {
+    margin: 0 0 4px 0;
+}
+
+.box-content span {
+    font-weight: bold;
+}
+
+.weather-icon {
+    float: right;
+}
+
+/* Positioning for Mobile (Default) */
+.data-box {
+    top: 10px;
+    left: 10px;
+}
+
+.weather-box {
+    bottom: 20px;
+    right: 10px;
+}
+
+/* Positioning for Desktop (Screens wider than 600px) */
+@media (min-width: 600px) {
+    .info-box {
+        width: 255px;
+    }
+    
+    .data-box {
+        top: 20px;
+        left: 20px;
+    }
+    
+    .weather-box {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* --- Footer --- */
+
+footer {
+    background-color: var(--main-bg-color);
+    color: var(--text-light);
+    padding: 2rem;
+    margin-top: 20px;
+    text-align: center;
+    border-top: 4px solid var(--accent-color);
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Footer layout change for wider screens */
+@media (min-width: 650px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 1.5rem 4rem;
+    }
+}

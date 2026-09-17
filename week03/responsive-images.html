@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD131: Responsive Images | Web Development Fundamentals</title>
+
+    <meta name="description" content="Responsive Images">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Responsive Images">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Linking external responsive-images.css -->
+    <link rel="stylesheet" href="responsive-images.css">
+    <link rel="stylesheet" href="responsive-images-large.css">
+    <link rel="stylesheet" href="responsive-images-small.css">
+    <link rel="stylesheet" href="responsive-images-medium.css">
+    <script src="responsive-images.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1>Responsive Images</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
+                <img src="images/hero-small.webp" alt="Temple name and location" width="500" height="250" loading="lazy">
+            </picture>
+        </div>
+    </main>
+    
+</body>
+
+</html>
