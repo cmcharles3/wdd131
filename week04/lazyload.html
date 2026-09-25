@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading</title>
+    <meta name="description" content="Lazy loading pictures">
+    <meta name="author" content="Charles Chiparo">
+    <link rel="stylesheet" href="styles/lazy.css">
+</head>
+<body>
+    <header><h1>Lazy Loading</h1></header>
+    <main>
+        <picture>
+            <source srcset="images/queensland.webp" type="image/webp">
+            <img src="images/queensland.jpg/400/600" alt="Queensland" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <p>I love sight seeing!</p>
+        </picture>
+        <picture>
+            <source srcset="images/queensland.webp" type="image/webp">
+            <img src="images/queensland.jpg/400/700" alt="Queensland" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <source srcset="images/queensland.webp" type="image/webp">
+            <img src="images/queensland.jpg/400/800" alt="Queensland" loading="lazy" width="400" height="600"> 
+        </picture>
+        <picture>
+            <source srcset="images/queensland.webp" type="image/webp">
+            <img src="images/queensland.jpg/400/650" alt="Queensland" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <source srcset="images/queensland.webp" type="image/webp">
+            <img src="images/queensland.jpg/400/750" alt="Queensland" loading="lazy" width="400" height="600">
+        </picture>      
+
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🌺 Charles Chiparo 🌺 South Africa.</p>
+        <p>Last Updated: <span id="lastModified"></span></p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!-- Add at least three more temple objects to your array, matching the same properties with relevant key-value pairs.
+Loop through the array and create "temple cards" for each temple by displaying:
+The name of the temple.
+The location of the temple.
+The date the temple was dedicated.
+The total area of the temple in square feet.
+The provided image of the temple (an absolute address), making sure to include an appropriate alt value such as the name of the temple.
+Use native lazy loading for each temple image. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temples | Charles Chiparo</title>
+
+    <meta name="description" content="Dynamically generated HTML using JavaScript.">
+    <meta name="author" content="Charles Chiparo">
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Script loaded with defer attribute -->
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+      <div class="header-content">
+        <h1>Temple Album</h1>
+        <nav>
+          <ul>
+            <li><a href="#" id="home" class="active">Home</a></li>
+            <li><a href="#" id="old">Old</a></li>
+            <li><a href="#" id="new">New</a></li>
+            <li><a href="#" id="large">Large</a></li>
+            <li><a href="#" id="small">Small</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+       <h2 id="category-title">Home</h2>
+       <div id="temple-container"></div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🌺 Charles Chiparo 🌺 South Africa.</p>
+        <p>Last Updated: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>
