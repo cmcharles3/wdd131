@@ -13,7 +13,7 @@ body {
 
 /* Header styling */
 header {
-  background-color: #3b0b59; /* Deep purple matching screenshot */
+  background-color: #57afeb; 
   color: #ffffff;
   padding: 1rem 2rem;
 }
@@ -61,7 +61,7 @@ main {
 }
 
 main h2 {
-  color: #3b0b59;
+  color: #6c0e91;
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   font-weight: 500;
@@ -120,7 +120,7 @@ main h2 {
 footer {
   text-align: center;
   padding: 1.5rem;
-  background-color: #3b0b59;
+  background-color: #57afeb;
   color: #ffffff;
   margin-top: 3rem;
   font-size: 0.9rem;
