@@ -56,14 +56,12 @@ const temples = [
     imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/400x250/salt-lake-temple-37762.jpg"
   },
   {
-    templeName: "Bern Switzerland",
-    location: "Bern, Switzerland",
-    dedicated: "1955, September, 11", 
-    area: 16600,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bern-switzerland/400x250/bern-switzerland-temple-exterior-2-1075607-wallpaper.jpg"
-  },
-  
-
+    templeName: "Mesa Arizona",
+    location: "Mesa, Arizona, United States",
+    dedicated: "1927, October, 23",
+    area: 10700,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mesa-arizona/400x250/mesa-arizona-temple-1416672-wallpaper.jpg"
+  }
 ];
 
 // Initialize on DOM load
