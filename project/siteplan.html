@@ -1,158 +1,144 @@
-<!-- W05 Project: Website Planning Document Overview -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Planning Document | Cedar3 Technology</title>
-    <meta name="description" content="Cedar3 Technology (Pty) Ltd offers reliable IT support, enterprise printer repair, and network hardware setup in Gauteng. Why your printer is not working? Request a technician quote today. ">
-    <meta name="author" content="Charles Chiparo">
-    <link rel="stylesheet" href="css/siteplan.css">
-
-
-    <!-- Google Fonts -->
+    <title>Website Planning Document | Summit & Trail Co.</title>
+    <link rel="stylesheet" href="siteplan.css">
+    <!-- Google Fonts import for chosen typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="siteplan.js"></script>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
         <h1>Website Planning Document</h1>
-        <p class="subtitle">Cedar3 Technology (Pty) Ltd</p>
+        <p class="subtitle">WDD 131 Project Site Plan</p>
     </header>
 
     <main>
-        <!-- Site Name Section -->
+        <!-- SITE NAME SECTION -->
         <section id="site-name">
             <h2>Site Name</h2>
             <div class="branding-container">
-                <div class="logo">
-                    <img src="images/cedar3_logo.png" alt="Cedar3 Technology Logo" width="150">
+                <!-- Replace logo placeholder with your actual image path when ready -->
+                <div class="logo-placeholder">
+                    <span>[ Logo Placeholder ]</span>
                 </div>
-                <div class="site-title">
-                    <p><strong>Cedar3 Technology (Pty) Ltd</strong></p>
+                <div>
+                    <h3>Summit & Trail Co.</h3>
+                    <p><strong>Reason for Name:</strong> The name represents a community-focused hub for outdoor enthusiasts who enjoy hiking, trail running, and mountain adventures. It is catchy, memorable, and directly describes the site's focus on alpine routes and outdoor gear recommendations.</p>
+                    <p><strong>Optional Domain Availability:</strong> <code>summitandtrail.org</code></p>
                 </div>
             </div>
-            <p>This name represents a technology company focused on providing innovative solutions and services.</p>
-            <p>Optional domain availability: cedar3tech.com</p>
         </section>
 
-        <!-- Site Purpose Section -->
+        <!-- SITE PURPOSE SECTION -->
         <section id="site-purpose">
             <h2>Site Purpose</h2>
-            <p>The site provides information about Cedar3 Technology's services, products, and company background. It serves as a hub for potential clients and partners to learn more about the company and its offerings.</p>
+            <p>The site provides a central resource for regional hikers and outdoor enthusiasts. It features detailed trail reviews, difficulty ratings, interactive gear checklists, and a contact/newsletter signup form for local group hike meetups.</p>
         </section>
 
+        <!-- SCENARIOS SECTION -->
         <section id="scenarios">
             <h2>Scenarios (Target Audience Questions)</h2>
-            <ul class="scenarios-list">
+            <ul class="scenario-list">
                 <li>
-                    <strong>Scenario 1:</strong> What services does Cedar3 Technology offer?</li>
+                    <strong>Scenario 1:</strong> "Where can I find beginner-friendly hiking trails near the city with dog-friendly policies?"
+                </li>
                 <li>
-                    <strong>Scenario 2:</strong> How can I contact the company for business inquiries?</li>
+                    <strong>Scenario 2:</strong> "What essential gear should I pack for an overnight backcountry hike, and how can I join the next group excursion?"
+                </li>
             </ul>
         </section>
 
-        <!-- Color Schema Section -->
+        <!-- COLOR SCHEMA SECTION -->
         <section id="color-schema">
             <h2>Color Schema</h2>
-            <p>The color schema for the website is designed to create a professional and modern look, enhancing user experience and brand identity.</p>
+            <p>The selected color scheme uses natural, grounded tones to convey an outdoor, rustic, and adventurous theme.</p>
             
             <div class="color-palette">
-                <div class="color-item" style="background-color: #1E90FF;">
-                    <p>Primary Color</p>
+                <div class="color-box primary-bg">
+                    <span>Primary: Forest Green</span>
+                    <code>#1E4620</code>
+                    <small>Used for header background, primary headings, and accent borders.</small>
                 </div>
-                <div class="color-item secondary-bg">
-                    <p>Secondary Color</p>
+                <div class="color-box secondary-bg">
+                    <span>Secondary: Trail Rust</span>
+                    <code>#D96B27</code>
+                    <small>Used for buttons, links, highlight elements, and callouts.</small>
                 </div>
                 <div class="color-box accent-bg">
-                    <p>Accent Color</p>
-                </div>            
-            </div>
-            <div class="color-box dark-bg">
-                <p>Dark Color</p>
+                    <span>Accent Light: Sand White</span>
+                    <code>#F4F1EA</code>
+                    <small>Used for page background, card container backgrounds, and code tags.</small>
+                </div>
+                <div class="color-box dark-bg">
+                    <span>Text Dark: Granite Gray</span>
+                    <code>#2C302E</code>
+                    <small>Used for main body text, paragraph content, and footer background.</small>
+                </div>
             </div>
         </section>
 
-        <!-- Typography Section -->
+        <!-- TYPOGRAPHY SECTION -->
         <section id="typography">
             <h2>Typography</h2>
-            <p>The site uses two Google Fonts to deliver a clean and modern look:</p>
-            <div class="font-demo">
-                <h3>Roboto (Headings)</h3>
-                <p class="font-sample">ABCDEFGHIJKLMNOPQRSTUVWXYZ<BR>abcdefghijklmnopqrstuvwxyz<br>1234567890</p>
-                <p><strong>Usage:</strong> Page titles (h1), section titles (h2), servicecards (h3).</p>
-            </div>
-            <div class="font-card body-font-demo">
-                <h3>Roboto (Body Text)</h3>
-                <p class="font-sample">ABCDEFGHIJKLMNOPQRSTUVWXYZ<BR>abcdefghijklmnopqrstuvwxyz<br>1234567890</p>
-                <p><strong>Usage:</strong> Paragraphs, service lists, scenario descriptions, and other body content.</p>
-            </div>
-        </section>
-
-        <!-- WIREFRAMES: mobile & desktop views -->
-        <section class="section">
-            <h2>📐 Wireframes</h2>
-            <p>Below are simplified wireframe representations for the home page in mobile (narrow) and desktop (wide) views. Layout blocks indicate content relationships.</p>
+            <p>The site uses two Google Fonts to balance bold readability for headlines with high legibility for long-form reading.</p>
             
-            <div class="wireframe-grid">
-                <!-- MOBILE WIREFRAME -->
-                <div class="wireframe-card">
-                    <h3>📱 Mobile (≤600px)</h3>
-                    
-                    <div class="wf-block wf-nav">☰ logo / menu</div>
-                    <div class="wf-block wf-hero">
-                        HERO (image + headline)
-                        <span class="small-label">"Explore. Protect. Connect."</span>
-                    </div>
-                    <div class="wf-block">🔍 Search trails</div>
-                    <div class="wf-row">
-                        <div class="wf-block">Trail card 1</div>
-                        <div class="wf-block">Trail card 2</div>
-                    </div>
-                    <div class="wf-block">📋 Volunteer CTA button</div>
-                    <div class="wf-block">📰 Latest news / conditions</div>
-                    <div class="wf-block wf-footer">© footer – social / contact</div>
-                    <p style="font-size: 0.7rem; text-align: center; margin-top: 0.4rem;">Single column, stacked blocks, thumb-friendly.</p>
+            <div class="font-demo">
+                <div class="font-card heading-font-demo">
+                    <h3>Heading Font: Montserrat</h3>
+                    <p class="font-sample">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>1234567890</p>
+                    <p><strong>Usage:</strong> Page titles (h1), main subheadings (h2), and card titles (h3).</p>
                 </div>
-
-                <!-- DESKTOP WIREFRAME -->
-                <div class="wireframe-card">
-                    <h3>💻 Desktop (≥900px)</h3>
-                    
-                    <div class="wf-row">
-                        <div class="wf-block wf-nav" style="flex:2;">🌲 Logo</div>
-                        <div class="wf-block wf-nav" style="flex:3;">Home&nbsp;&nbsp;Trails&nbsp;&nbsp;Events&nbsp;&nbsp;Membership</div>
-                        <div class="wf-block wf-nav" style="flex:1;">Search</div>
-                    </div>
-                    <div class="wf-block wf-hero" style="padding: 1.2rem;">
-                        HERO – full width image + text overlay
-                    </div>
-                    <div class="wf-row">
-                        <div class="wf-block">🏔️ Featured trails (grid)</div>
-                        <div class="wf-block">📅 Events</div>
-                    </div>
-                    <div class="wf-row">
-                        <div class="wf-block">📝 Membership form (inline)</div>
-                        <div class="wf-block">🗺️ Interactive map preview</div>
-                    </div>
-                    <div class="wf-block wf-footer">© Cascade Trail Alliance – footer links</div>
-                    <p style="font-size: 0.7rem; text-align: center; margin-top: 0.4rem;">Two/three column grid, expanded navigation.</p>
+                <div class="font-card body-font-demo">
+                    <h3>Body Font: Open Sans</h3>
+                    <p class="font-sample">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>1234567890</p>
+                    <p><strong>Usage:</strong> Paragraphs, list items, form field labels, and general body text.</p>
                 </div>
             </div>
-            <p style="margin-top: 0.8rem; font-style: italic;">Wireframe diagrams are schematic; final layout will include real content.</p>
-        </section>
         </section>
 
+        <!-- WIREFRAMES SECTION -->
+        <section id="wireframes">
+            <h2>Wireframes</h2>
+            <p>Below are conceptual layout wireframes for the homepage in both mobile and desktop (wide-screen) viewport views.</p>
+
+            <div class="wireframe-container">
+                <!-- Mobile Wireframe Representation -->
+                <div class="wireframe-box">
+                    <h3>Mobile View</h3>
+                    <div class="wf-diagram wf-mobile">
+                        <div class="wf-block wf-header">Header / Nav (Hamburger)</div>
+                        <div class="wf-block wf-hero">Hero Banner & CTA</div>
+                        <div class="wf-block wf-content">Trail Highlights (1 Column)</div>
+                        <div class="wf-block wf-content">Gear Guide Cards</div>
+                        <div class="wf-block wf-footer">Footer</div>
+                    </div>
+                </div>
+
+                <!-- Desktop Wireframe Representation -->
+                <div class="wireframe-box">
+                    <h3>Desktop View</h3>
+                    <div class="wf-diagram wf-desktop">
+                        <div class="wf-block wf-header">Header / Logo / Navigation Links</div>
+                        <div class="wf-block wf-hero">Hero Image with Overlay & Call to Action</div>
+                        <div class="wf-grid-2">
+                            <div class="wf-block wf-content">Featured Trails Grid</div>
+                            <div class="wf-block wf-sidebar">Sidebar / Upcoming Events</div>
+                        </div>
+                        <div class="wf-block wf-footer">Footer Navigation & Social Links</div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-       <p>&copy;<span id="currentyear"></span> 🌺 Charles Chiparo 🌺 South Africa</p>
-    <p>Last Updated: <span id="lastModified"></span></p>
+        <p>&copy; 2026 Summit & Trail Co. | WDD 131 Project Plan Document</p>
     </footer>
-    
+
 </body>
 </html>
