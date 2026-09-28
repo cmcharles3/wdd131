@@ -1,121 +1,113 @@
+<!-- W05 Project: Website Planning Document Overview -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Planning Document | Summit & Trail Co.</title>
-    <link rel="stylesheet" href="siteplan.css">
-    <!-- Google Fonts import for chosen typography -->
+    <title>Website Planning Document | Cedar3 Technology (Pty) Ltd</title>
+    <meta name="description" content="A document planning for Cedar3 Technology (Pty) Ltd offering reliable IT support, enterprise printer repair, and network hardware setup in Gauteng. Why throwing your non-working printers yet Cedar3 Technology has the solution for you? Don't allow printer frustrations be on you, let us take charge of your problems. Request a technician quote today. ">
+    <meta name="author" content="Charles Chiparo">
+    <link rel="stylesheet" href="css/siteplan.css">
+
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="siteplan.js"></script>
+    
 </head>
 <body>
-
     <header>
         <h1>Website Planning Document</h1>
-        <p class="subtitle">WDD 131 Project Site Plan</p>
+        <p class="subtitle">Cedar3 Technology (Pty) Ltd</p>
     </header>
 
     <main>
-        <!-- SITE NAME SECTION -->
+        <!-- Site Name Section -->
         <section id="site-name">
             <h2>Site Name</h2>
             <div class="branding-container">
-                <!-- Replace logo placeholder with your actual image path when ready -->
-                <div class="logo-placeholder">
-                    <span>[ Logo Placeholder ]</span>
+                <div class="logo">
+                    <img src="images/cedar3_logo.png" alt="Cedar3 Technology Logo" width="150">
                 </div>
-                <div>
-                    <h3>Summit & Trail Co.</h3>
-                    <p><strong>Reason for Name:</strong> The name represents a community-focused hub for outdoor enthusiasts who enjoy hiking, trail running, and mountain adventures. It is catchy, memorable, and directly describes the site's focus on alpine routes and outdoor gear recommendations.</p>
-                    <p><strong>Optional Domain Availability:</strong> <code>summitandtrail.org</code></p>
+                <div class="site-title">
+                    <p><strong>Cedar3 Technology (Pty) Ltd</strong></p>
                 </div>
             </div>
+            <p>This name represents a technology company focused on providing innovative solutions and services.</p>
+            <p>Optional domain availability: cedar3tech.com</p>
         </section>
 
-        <!-- SITE PURPOSE SECTION -->
+        <!-- Site Purpose Section -->
         <section id="site-purpose">
             <h2>Site Purpose</h2>
-            <p>The site provides a central resource for regional hikers and outdoor enthusiasts. It features detailed trail reviews, difficulty ratings, interactive gear checklists, and a contact/newsletter signup form for local group hike meetups.</p>
+            <p>The site provides information about Cedar3 Technology's services, products, and company background. It serves as a hub for potential clients and partners to learn more about the company and its offerings.</p>
         </section>
 
-        <!-- SCENARIOS SECTION -->
         <section id="scenarios">
             <h2>Scenarios (Target Audience Questions)</h2>
-            <ul class="scenario-list">
+            <ul class="scenarios-list">
                 <li>
-                    <strong>Scenario 1:</strong> "Where can I find beginner-friendly hiking trails near the city with dog-friendly policies?"
-                </li>
+                    <strong>Scenario 1:</strong> What services does Cedar3 Technology offer?</li>
                 <li>
-                    <strong>Scenario 2:</strong> "What essential gear should I pack for an overnight backcountry hike, and how can I join the next group excursion?"
-                </li>
+                    <strong>Scenario 2:</strong> How can I contact the company for business inquiries?</li>
             </ul>
         </section>
 
-        <!-- COLOR SCHEMA SECTION -->
+        <!-- Color Schema Section -->
         <section id="color-schema">
             <h2>Color Schema</h2>
-            <p>The selected color scheme uses natural, grounded tones to convey an outdoor, rustic, and adventurous theme.</p>
+            <p>The color schema for the website is designed to create a professional and modern look, enhancing user experience and brand identity.</p>
             
             <div class="color-palette">
-                <div class="color-box primary-bg">
-                    <span>Primary: Forest Green</span>
-                    <code>#1E4620</code>
-                    <small>Used for header background, primary headings, and accent borders.</small>
+                <div class="color-item" style="background-color: #1E90FF;">
+                    <p>Primary Color</p>
                 </div>
-                <div class="color-box secondary-bg">
-                    <span>Secondary: Trail Rust</span>
-                    <code>#D96B27</code>
-                    <small>Used for buttons, links, highlight elements, and callouts.</small>
+                <div class="color-item secondary-bg">
+                    <p>Secondary Color</p>
                 </div>
                 <div class="color-box accent-bg">
-                    <span>Accent Light: Sand White</span>
-                    <code>#F4F1EA</code>
-                    <small>Used for page background, card container backgrounds, and code tags.</small>
-                </div>
-                <div class="color-box dark-bg">
-                    <span>Text Dark: Granite Gray</span>
-                    <code>#2C302E</code>
-                    <small>Used for main body text, paragraph content, and footer background.</small>
-                </div>
+                    <p>Accent Color</p>
+                </div>            
+            </div>
+            <div class="color-box dark-bg">
+                <p>Dark Color</p>
             </div>
         </section>
 
-        <!-- TYPOGRAPHY SECTION -->
+        <!-- Typography Section -->
         <section id="typography">
             <h2>Typography</h2>
-            <p>The site uses two Google Fonts to balance bold readability for headlines with high legibility for long-form reading.</p>
-            
+            <p>The site uses two Google Fonts to deliver a clean and modern look:</p>
             <div class="font-demo">
-                <div class="font-card heading-font-demo">
-                    <h3>Heading Font: Montserrat</h3>
-                    <p class="font-sample">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>1234567890</p>
-                    <p><strong>Usage:</strong> Page titles (h1), main subheadings (h2), and card titles (h3).</p>
-                </div>
-                <div class="font-card body-font-demo">
-                    <h3>Body Font: Open Sans</h3>
-                    <p class="font-sample">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>1234567890</p>
-                    <p><strong>Usage:</strong> Paragraphs, list items, form field labels, and general body text.</p>
-                </div>
+                <h3>Roboto (Headings)</h3>
+                <p class="font-sample">ABCDEFGHIJKLMNOPQRSTUVWXYZ<BR>abcdefghijklmnopqrstuvwxyz<br>1234567890</p>
+                <p><strong>Usage:</strong> Page titles (h1), section titles (h2), servicecards (h3).</p>
+            </div>
+            <div class="font-card body-font-demo">
+                <h3>Roboto (Body Text)</h3>
+                <p class="font-sample">ABCDEFGHIJKLMNOPQRSTUVWXYZ<BR>abcdefghijklmnopqrstuvwxyz<br>1234567890</p>
+                <p><strong>Usage:</strong> Paragraphs, service lists, scenario descriptions, and other body content.</p>
             </div>
         </section>
 
         <!-- WIREFRAMES SECTION -->
         <section id="wireframes">
             <h2>Wireframes</h2>
-            <p>Below are conceptual layout wireframes for the homepage in both mobile and desktop (wide-screen) viewport views.</p>
+            <p>Below are conceptual layout wireframes for the homepage layout across mobile and desktop viewport sizes.</p>
 
             <div class="wireframe-container">
                 <!-- Mobile Wireframe Representation -->
                 <div class="wireframe-box">
                     <h3>Mobile View</h3>
                     <div class="wf-diagram wf-mobile">
-                        <div class="wf-block wf-header">Header / Nav (Hamburger)</div>
-                        <div class="wf-block wf-hero">Hero Banner & CTA</div>
-                        <div class="wf-block wf-content">Trail Highlights (1 Column)</div>
-                        <div class="wf-block wf-content">Gear Guide Cards</div>
-                        <div class="wf-block wf-footer">Footer</div>
+                        <div class="wf-block wf-header">Header / Nav (Menu Toggle)</div>
+                        <div class="wf-block wf-hero">Hero: IT Solutions & Call to Action</div>
+                        <div class="wf-block wf-content">Service Cards (Single Column)</div>
+                        <div class="wf-block wf-content">Diagnostics & Quote Request Form</div>
+                        <div class="wf-block wf-footer">Footer & Contact Details</div>
                     </div>
                 </div>
 
@@ -123,22 +115,25 @@
                 <div class="wireframe-box">
                     <h3>Desktop View</h3>
                     <div class="wf-diagram wf-desktop">
-                        <div class="wf-block wf-header">Header / Logo / Navigation Links</div>
-                        <div class="wf-block wf-hero">Hero Image with Overlay & Call to Action</div>
+                        <div class="wf-block wf-header">Header / Cedar3 Logo / Navigation Links</div>
+                        <div class="wf-block wf-hero">Hero Section: Business IT Support & Quick Quote CTA</div>
                         <div class="wf-grid-2">
-                            <div class="wf-block wf-content">Featured Trails Grid</div>
-                            <div class="wf-block wf-sidebar">Sidebar / Upcoming Events</div>
+                            <div class="wf-block wf-content">Core Services Grid (Printers, Networks, Repair)</div>
+                            <div class="wf-block wf-sidebar">Sidebar / Recent Diagnostics FAQ</div>
                         </div>
-                        <div class="wf-block wf-footer">Footer Navigation & Social Links</div>
+                        <div class="wf-block wf-footer">Footer Navigation, Hours & Service Area</div>
                     </div>
                 </div>
             </div>
         </section>
+        </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 Summit & Trail Co. | WDD 131 Project Plan Document</p>
+       <p>&copy;<span id="currentyear"></span> 🌺 Charles Chiparo 🌺 South Africa</p>
+    <p>Last Updated: <span id="lastModified"></span></p>
     </footer>
-
+    
 </body>
 </html>
