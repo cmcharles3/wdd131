@@ -1,0 +1,117 @@
+import datetime
+
+# ==========================================
+# BUSINESS & TRADING HOURS CONFIGURATION
+# ==========================================
+# Trading Hours:
+# Mon - Fri: 08:00 to 17:00 (9 hours)
+# Sat:       08:00 to 14:00 (6 hours)
+WEEKLY_STANDARD_HOURS = (5 * 9) + 6  # 51 hours/week
+MONTHLY_STANDARD_HOURS = 51 * 4.333  # ~221 hours/month
+COMMISSION_RATE = 0.2
+THRESHOLD_ADDON = 3000.00
+
+
+class Employee:
+    def __init__(self, name: str, role: str, base_salary: float):
+        self.name = name
+        self.role = role
+        self.base_salary = base_salary
+        self.threshold = base_salary + THRESHOLD_ADDON
+        self.hourly_rate = base_salary / MONTHLY_STANDARD_HOURS
+        self.daily_rate_mon_fri = self.hourly_rate * 9
+        self.daily_rate_sat = self.hourly_rate * 6
+
+    def calculate_pay(self, total_hours_worked: float, printer_sales: float) -> dict:
+        """
+        Calculates final prorated salary, commission earned, and total payout.
+        """
+        # Prorated Salary based on hours worked
+        prorated_salary = total_hours_worked * self.hourly_rate
+
+        # Commission calculation: 5% on sales exceeding threshold
+        eligible_sales = max(0.0, printer_sales - self.threshold)
+        commission_earned = eligible_sales * COMMISSION_RATE
+
+        # Final Gross Payable
+        final_payable = prorated_salary + commission_earned
+
+        return {
+            "Employee": self.name,
+            "Role": self.role,
+            "Base Salary": self.base_salary,
+            "Threshold": self.threshold,
+            "Hourly Rate": round(self.hourly_rate, 2),
+            "Daily Rate (M-F)": round(self.daily_rate_mon_fri, 2),
+            "Daily Rate (Sat)": round(self.daily_rate_sat, 2),
+            "Actual Hours Worked": total_hours_worked,
+            "Prorated Base Pay": round(prorated_salary, 2),
+            "Printer Sales": printer_sales,
+            "Eligible Sales": eligible_sales,
+            "Commission Earned": round(commission_earned, 2),
+            "Final Gross Pay": round(final_payable, 2),
+        }
+
+
+def calculate_worked_hours(clock_in_str: str, clock_out_str: str) -> float:
+    """
+    Helper function to calculate total worked hours from 'HH:MM' string timestamps.
+    """
+    if not clock_in_str or not clock_out_str:
+        return 0.0
+
+    time_fmt = "%H:%M"
+    t_in = datetime.datetime.strptime(clock_in_str, time_fmt)
+    t_out = datetime.datetime.strptime(clock_out_str, time_fmt)
+
+    tdelta = t_out - t_in
+    return tdelta.total_seconds() / 3600.0
+
+
+# ==========================================
+# EXECUTION & SAMPLE PAYROLL RUN
+# ==========================================
+if __name__ == "__main__":
+    # Staff Definitions
+    staff = [
+        Employee("Talent", "Technician / Sales", 6000.00),
+        Employee("Simba", "Technician / Sales", 4500.00),
+        Employee("Lean", "Admin", 3000.00),
+    ]
+
+    # Example Input Data for Current Month
+    payroll_inputs = {
+        "Talent": {"hours_worked": 221.0, "printer_sales": 12000.00},
+        "Simba": {"hours_worked": 215.0, "printer_sales": 8500.00},
+        "Lean": {"hours_worked": 221.0, "printer_sales": 4000.00},
+    }
+
+    print("=" * 85)
+    print(" CEDAR3 TECHNOLOGY - MONTHLY PAYROLL & COMMISSION REPORT ")
+    print("=" * 85)
+
+    for emp in staff:
+        data = payroll_inputs.get(
+            emp.name, {"hours_worked": 0.0, "printer_sales": 0.0}
+        )
+        pay_summary = emp.calculate_pay(
+            total_hours_worked=data["hours_worked"],
+            printer_sales=data["printer_sales"],
+        )
+
+        print(f"\nEmployee: {pay_summary['Employee']} ({pay_summary['Role']})")
+        print(f"  • Base Salary:          R{pay_summary['Base Salary']:,.2f}")
+        print(f"  • Hourly Rate:           R{pay_summary['Hourly Rate']:,.2f}/hr")
+        print(f"  • Daily Rate (Mon-Fri):  R{pay_summary['Daily Rate (M-F)']:,.2f}/day")
+        print(f"  • Daily Rate (Sat):      R{pay_summary['Daily Rate (Sat)']:,.2f}/day")
+        print(
+            f"  • Worked Hours:          {pay_summary['Actual Hours Worked']} hrs -> Prorated Pay: R{pay_summary['Prorated Base Pay']:,.2f}"
+        )
+        print(
+            f"  • Sales Generated:       R{pay_summary['Printer Sales']:,.2f} (Threshold: R{pay_summary['Threshold']:,.2f})"
+        )
+        print(f"  • Commission Earned:     R{pay_summary['Commission Earned']:,.2f}")
+        print(f"  --------------------------------------------------")
+        print(f"  • FINAL PAYOUT:          R{pay_summary['Final Gross Pay']:,.2f}")
+
+    print("=" * 85)

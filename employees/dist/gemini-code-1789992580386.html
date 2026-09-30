@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cedar3 Technology - Workshop Progress & Hours Tracker</title>
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --primary-color: #0066cc;
+            --border-color: #e0e0e0;
+        }
+
+        body.dark-mode {
+            --bg-color: #1e1e1e;
+            --card-bg: #2d2d2d;
+            --text-color: #f4f6f9;
+            --primary-color: #3399ff;
+            --border-color: #444444;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            max-height: 70px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .company-info h1 {
+            margin: 0;
+            font-size: 1.4rem;
+            color: var(--primary-color);
+        }
+
+        .company-info p {
+            margin: 2px 0 0 0;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab-btn {
+            padding: 10px 18px;
+            border: none;
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .tab-btn.active {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        select, input, textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            box-sizing: border-box;
+            background: var(--card-bg);
+            color: var(--text-color);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-primary { background: var(--primary-color); color: white; }
+        .btn-success { background: #28a745; color: white; }
+        .btn-danger { background: #dc3545; color: white; }
+
+        .masked {
+            font-family: monospace;
+            letter-spacing: 2px;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo-container">
+            <!-- Inline Base64 Logo for Cedar3 Technology -->
+            <img class="logo-img" src="data:image/png;base64,iVBORw0KGgoAAAANAAIAAAABCAYAAAAC1AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH6AIVDg0W83
+            JbxgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmhoAAAAAElFTkSuQmCC" alt="Cedar3 Technology Logo" id="brand-logo">
+            <div class="company-info">
+                <h1>Cedar3 Technology (Pty) Ltd</h1>
+                <p>Committed to Excellence!!!</p>
+            </div>
+        </div>
+        <div>
+            <button onclick="togglePortal()" id="portal-toggle-btn">Portal: Technician</button>
+            <button onclick="toggleDarkMode()">🌓 Mode</button>
+        </div>
+    </header>
+
+    <div class="nav-tabs">
+        <button class="tab-btn active" onclick="switchTab('clock-in-tab')">Workstation Clock-In</button>
+        <button class="tab-btn" onclick="switchTab('dashboard-tab')">Live Dashboard</button>
+    </div>
+
+    <!-- TAB 1: WORKSTATION CLOCK-IN -->
+    <div id="clock-in-tab" class="tab-content active">
+        <div class="form-group">
+            <label for="emp-select">Select Staff Member:</label>
+            <select id="emp-select" onchange="updateHourlyDisplay()">
+                <option value="Talent">Talent (Technician)</option>
+                <option value="Simba">Simba (Technician)</option>
+                <option value="Lean">Lean (Reception / Printer Specialist)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Monthly Salary Structure:</label>
+            <input type="text" id="salary-display" value="••••••" readonly class="masked">
+        </div>
+
+        <div class="form-group">
+            <label for="task-notes">Log Current Jobs / Work Notes:</label>
+            <textarea id="task-notes" rows="5" placeholder="Enter fault diagnosis, printer serial numbers, or service notes..."></textarea>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn-success" onclick="clockIn()">Clock In</button>
+            <button class="btn-danger" onclick="clockOut()">Clock Out</button>
+        </div>
+    </div>
+
+    <!-- TAB 2: LIVE DASHBOARD -->
+    <div id="dashboard-tab" class="tab-content">
+        <h3>Live Workshop Operations</h3>
+        <p>Monitor real-time technician clock-ins, job progress, and workshop tickets.</p>
+        <div id="active-sessions-list">
+            <p><i>No active sessions running.</i></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>©2026 🦄 Software Developer 🦄</p>
+    </footer>
+</div>
+
+<script>
+    const EMPLOYEES = {
+        "Talent": { monthly: 6000, role: "Technician" },
+        "Simba": { monthly: 4500, role: "Technician" },
+        "Lean": { monthly: 3500, role: "Reception / Printer Specialist" }
+    };
+
+    let isAdmin = false;
+
+    function switchTab(tabId) {
+        document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+        event.target.classList.add('active');
+    }
+
+    function togglePortal() {
+        if (!isAdmin) {
+            const pin = prompt("Enter Admin PIN:");
+            if (pin === "1234") {
+                isAdmin = true;
+                document.getElementById('portal-toggle-btn').innerText = "Portal: Administrator";
+                updateHourlyDisplay();
+            } else {
+                alert("Incorrect PIN");
+            }
+        } else {
+            isAdmin = false;
+            document.getElementById('portal-toggle-btn').innerText = "Portal: Technician";
+            updateHourlyDisplay();
+        }
+    }
+
+    function updateHourlyDisplay() {
+        const emp = document.getElementById('emp-select').value;
+        const display = document.getElementById('salary-display');
+        if (isAdmin) {
+            display.classList.remove('masked');
+            display.value = `R ${EMPLOYEES[emp].monthly.toFixed(2)} / month`;
+        } else {
+            display.classList.add('masked');
+            display.value = "••••••";
+        }
+    }
+
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+
+    function clockIn() {
+        const emp = document.getElementById('emp-select').value;
+        alert(`${emp} clocked in successfully.`);
+    }
+
+    function clockOut() {
+        const emp = document.getElementById('emp-select').value;
+        alert(`${emp} clocked out successfully.`);
+    }
+</script>
+</body>
+</html>
