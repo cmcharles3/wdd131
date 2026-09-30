@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/review.js"defer></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // localStorage Counter
+            let reviewCounter = Number(localStorage.getItem("reviewCounter")) || 0;
+            reviewCounter++;
+            localStorage.setItem("reviewCounter", reviewCounter);
+
+            const counterDisplay = document.getElementById("review-count-display");
+            if (counterDisplay) {
+                counterDisplay.textContent = reviewCount;
+            }
+
+            <!-- Footer -->
+            document.getElementById("currentyear").textContent = new Date().getFullYear();
+            document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Review Confirmation</h1>
+    </header>
+
+    <main class="confirmation-container">
+        <h2>Thank You for Your Review!</h2>
+    <p>Your feedback has been successfully submitted.</p>
+    <div class="counter-box">
+      <p>Total Reviews Submitted: <strong id="review-count-display">0</strong></p>
+    </div>
+    <a href="form.html" class="back-link">Submit Another Review</a>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="currentyear"></span> Charles Chiparo | South Africa</p>
+    <p id="lastModified"></p>
+  </footer>
+    </main>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Get current count from localStorage (defaults to 0 if null)
+    let currentCount = Number(localStorage.getItem("reviewCount")) || 0;
+
+    // 2. Increment by 1
+    currentCount++;
+
+    // 3. Save updated value back to localStorage
+    localStorage.setItem("reviewCount", currentCount);
+
+    // 4. Update the text on the page
+    const counterElement = document.getElementById("review-count");
+    if (counterElement) {
+      counterElement.textContent = currentCount;
+    }
+
+    // 5. Update footer dates
+    const yearSpan = document.getElementById("currentyear");
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+
+    const modifiedSpan = document.getElementById("lastModified");
+    if (modifiedSpan) {
+      modifiedSpan.textContent = `Last Modification: ${document.lastModified}`;
+    }
+  });
+</script>
+    
+</body>
+</html>

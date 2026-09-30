@@ -1,0 +1,171 @@
+:root {
+    --primary-color: #3b1836;
+    --bg-color: #d8cfd6;
+    --form-bg: #e6e0e5;
+    --text-color: #222222;
+    --border-color: #b5aab3;
+    --accent-color: #5c2854;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  flex: 1;
+  max-width: 500px;
+  width: 90%;
+  margin: 1.5rem auto;
+  background-color: var(--form-bg);
+  padding: 1.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+label, legend {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.required {
+  color: #b30000;
+}
+
+.optional {
+  color: #5a3e63;
+  font-weight: normal;
+  font-size: 0.85rem;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+/* Rating Stars Layout */
+.rating-options {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.rating-options label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.stars {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Checkbox Layout */
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: normal;
+  margin-top: 0.4rem;
+  cursor: pointer;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #ededed;
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.75rem;
+  border: 1px solid #767676;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+  background-color: #dcdcdc;
+}
+
+/* Confirmation Page Specifics */
+.confirmation-container {
+  text-align: center;
+}
+
+.counter-box {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin: 0.2rem 0;
+}

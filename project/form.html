@@ -1,0 +1,121 @@
+<!-- In this assignment, you will create a product review form page. You will apply good form design principles, meet specific field requirements, and include a submission confirmation with a counter. Additionally, the form must be user-friendly on both mobile and desktop screens.
+
+Mobile view screenshot example of product review form
+Product Review Form Example
+Task
+Build an HTML form with a confirmation page that meets the specified requirements. The design is your choice but must follow good form design principles. Here is an example screenshot of what you will build.
+
+Associated Course Learning Outcomes
+Develop responsive web pages that follow best practices and use valid HTML and CSS.
+Demonstrate proficiency with JavaScript language syntax.
+Use JavaScript to respond to events and dynamically modify HTML.
+Demonstrate the traits of an effective team member including clear communication, collaboration, fulfilling assignments, and meeting deadlines. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form action="review.html" method="get" class="review-form"></form>
+
+        <!-- Product Name -->
+         <div class="form-group">
+            <label for="product-select">Product Name <span class="required"></span></label>
+            <select id="product-select" name="productName" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
+         </div>
+
+         <!-- Overall Rating -->
+      <fieldset class="form-group rating-group">
+        <legend>Overall Rating <span class="required">*</span></legend>
+        <div class="rating-options">
+          <label for="star1">
+            <span class="stars">&star;</span>
+            <input type="radio" id="star1" name="rating" value="1" required>
+          </label>
+          <label for="star2">
+            <span class="stars">&star;&star;</span>
+            <input type="radio" id="star2" name="rating" value="2" required>
+          </label>
+          <label for="star3">
+            <span class="stars">&star;&star;&star;</span>
+            <input type="radio" id="star3" name="rating" value="3" required>
+          </label>
+          <label for="star4">
+            <span class="stars">&star;&star;&star;&star;</span>
+            <input type="radio" id="star4" name="rating" value="4" required>
+          </label>
+          <label for="star5">
+            <span class="stars">&star;&star;&star;&star;&star;</span>
+            <input type="radio" id="star5" name="rating" value="5" required>
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Date of Installation -->
+      <div class="form-group">
+        <label for="install-date">Date of Installation <span class="required">*</span></label>
+        <input type="date" id="install-date" name="installDate" required>
+      </div>
+
+      <!-- Useful Features -->
+      <fieldset class="form-group checkbox-group">
+        <legend>Which features did you find useful in the product? <em>(Check all that apply)</em></legend>
+        <label for="feature-durability">
+          <input type="checkbox" id="feature-durability" name="features" value="Durability">
+          Durability
+        </label>
+        <label for="feature-ease">
+          <input type="checkbox" id="feature-ease" name="features" value="Ease of Use">
+          Ease of Use
+        </label>
+        <label for="feature-performance">
+          <input type="checkbox" id="feature-performance" name="features" value="Performance">
+          Performance
+        </label>
+        <label for="feature-design">
+          <input type="checkbox" id="feature-design" name="features" value="Design">
+          Design
+        </label>
+      </fieldset>
+
+      <!-- Written Review -->
+      <div class="form-group">
+        <label for="written-review">Written Review <span class="optional">(Optional)</span></label>
+        <textarea id="written-review" name="reviewText" rows="5"></textarea>
+      </div>
+
+      <!-- User Name -->
+      <div class="form-group">
+        <label for="user-name">Your Name <span class="optional">(Optional)</span></label>
+        <input type="text" id="user-name" name="userName">
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <input type="submit" value="Post Review" class="submit-btn">
+      </div>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="currentyear"></span> Charles Chiparo | South Africa</p>
+    <p id="lastModified"></p>
+  </footer>
+    </main>
+    
+</body>
+</html>
