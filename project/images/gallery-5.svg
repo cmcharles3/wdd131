@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Toner cartridge illustration">
+  <rect width="400" height="300" fill="#F7FAFC"/>
+  <rect x="90" y="100" width="60" height="140" rx="6" fill="#0B4F87"/>
+  <rect x="170" y="80" width="60" height="160" rx="6" fill="#2E7DB8"/>
+  <rect x="250" y="120" width="60" height="120" rx="6" fill="#9CCDE8"/>
+  <rect x="100" y="115" width="40" height="20" fill="#9CCDE8"/>
+  <rect x="180" y="95" width="40" height="20" fill="#9CCDE8"/>
+  <rect x="260" y="135" width="40" height="20" fill="#FFFFFF"/>
+  <text x="200" y="270" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#52606D">Toner Supply</text>
+</svg>

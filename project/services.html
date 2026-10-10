@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Printer repairs, IT hardware support, and preventative maintenance from Cedar3 Technology in Benoni South, Johannesburg.">
+  <title>Services &amp; Solutions | Cedar3 Technology</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="" class="brand-logo" width="120" height="60">
+        <span class="brand-name">Cedar3 Technology</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" class="active" aria-current="page">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-intro">
+      <h1>Our Technical Services</h1>
+      <p>Filter through our specialized support categories below, or use the quick estimator to get an idea of turnaround time.</p>
+    </section>
+
+    <section>
+      <h2>Browse Services</h2>
+      <div class="filter-bar">
+        <button type="button" class="btn filter-btn active" data-filter="all">All Services</button>
+        <button type="button" class="btn filter-btn" data-filter="printer">Printers</button>
+        <button type="button" class="btn filter-btn" data-filter="it">IT Support</button>
+        <button type="button" class="btn filter-btn" data-filter="maintenance">Maintenance</button>
+      </div>
+
+      <div id="services-container" class="grid-3" role="region" aria-label="filtered service list" aria-live="polite">
+        <!-- Dynamically populated via JavaScript using template literals -->
+      </div>
+    </section>
+
+    <section class="interactive-box">
+      <h2>Service Quick Estimator</h2>
+      <p>Select a service category to estimate turnaround time:</p>
+      <label for="estimator-select">Choose a service to estimate turnaround time</label>
+      <select id="estimator-select">
+        <option value="">-- Select Service Type --</option>
+        <option value="printer">Multifunction Printer Diagnostic</option>
+        <option value="it">Hardware / PC Repair</option>
+        <option value="maintenance">Preventative Maintenance Service</option>
+        <option value="toner">Toner &amp; Consumables</option>
+        <option value="network">Network Setup</option>
+      </select>
+      <div id="estimator-result" class="result-box" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Cedar3 Technology (Pty) Ltd. All rights reserved.</p>
+      <p>25 Birmingham Road, Benoni South, Johannesburg</p>
+      <p><a href="references.html">References</a></p>
+    </div>
+  </footer>
+</body>
+</html>

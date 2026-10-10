@@ -1,0 +1,12 @@
+images/gallery-6.svg — On-Site Office Support
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="On-site office support illustration">
+  <rect width="400" height="300" fill="#F7FAFC"/>
+  <rect x="40" y="140" width="320" height="110" rx="8" fill="#0B4F87"/>
+  <rect x="70" y="80" width="80" height="60" rx="4" fill="#9CCDE8"/>
+  <rect x="160" y="80" width="80" height="60" rx="4" fill="#2E7DB8"/>
+  <rect x="250" y="80" width="80" height="60" rx="4" fill="#9CCDE8"/>
+  <rect x="180" y="180" width="40" height="70" fill="#1F2933"/>
+  <circle cx="200" cy="215" r="4" fill="#FFFFFF"/>
+  <text x="200" y="285" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#52606D">On-Site Support</text>
+</svg>

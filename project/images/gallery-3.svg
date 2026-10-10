@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Desktop computer illustration">
+  <rect width="400" height="300" fill="#F7FAFC"/>
+  <rect x="100" y="80" width="200" height="130" rx="8" fill="#0B4F87"/>
+  <rect x="115" y="95" width="170" height="100" rx="4" fill="#9CCDE8"/>
+  <rect x="160" y="215" width="80" height="10" fill="#1F2933"/>
+  <rect x="130" y="225" width="140" height="8" rx="3" fill="#52606D"/>
+  <text x="200" y="285" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#52606D">PC Diagnostics</text>
+</svg>

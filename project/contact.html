@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Cedar3 Technology in Benoni South to log a printer repair, IT support, or maintenance request.">
+  <title>Contact Us | Cedar3 Technology</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="" class="brand-logo" width="120" height="60">
+        <span class="brand-name">Cedar3 Technology</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-intro">
+      <h1>Get in Touch</h1>
+      <p>Visit us in Benoni South, call us directly, or submit a support request &mdash; we respond within one business day.</p>
+    </section>
+
+    <section class="contact-grid">
+      <div class="contact-info">
+        <h2>Visit or Call Us</h2>
+        <address>
+          <p><strong>Cedar3 Technology (Pty) Ltd</strong></p>
+          <p>25 Birmingham Road<br>Benoni South<br>Johannesburg, Gauteng</p>
+          <p>Phone: <a href="tel:+27110000000" aria-label="Call Cedar3 Technology at plus 27 11 000 0000">+27 76 484 7360</a></p>
+          <p>Email: <a href="mailto:info@cedar3tech.co.za">info@cedar3tech.co.za</a></p>
+        </address>
+      </div>
+
+      <div class="contact-form-wrap">
+        <h2>Log a Support Request</h2>
+        <form id="contact-form" novalidate>
+          <fieldset>
+            <legend>Your Details</legend>
+
+            <div class="form-row">
+              <label for="fullname">Full Name <span class="required-mark" aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                required
+                minlength="2"
+                maxlength="60"
+                autocomplete="name"
+                placeholder="e.g. Thandi Mokoena">
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email Address <span class="required-mark" aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                maxlength="80"
+                autocomplete="email"
+                placeholder="your.email@example.com">
+            </div>
+
+            <div class="form-row">
+              <label for="phone">Phone Number (optional)</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                maxlength="20"
+                autocomplete="tel"
+                placeholder="e.g. 011 000 0000">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Equipment Details</legend>
+
+            <div class="form-row">
+              <label for="service-type">Service Type <span class="required-mark" aria-hidden="true">*</span></label>
+              <select id="service-type" name="service-type" required>
+                <option value="">-- Please select --</option>
+                <option value="printer">Printer Repair / Maintenance</option>
+                <option value="it">Computer / IT Hardware Support</option>
+                <option value="maintenance">Preventative Maintenance Contract</option>
+                <option value="toner">Toner &amp; Consumables</option>
+                <option value="network">Network / Peripheral Setup</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="device">Equipment Type / Brand <span class="required-mark" aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="device"
+                name="device"
+                required
+                minlength="2"
+                maxlength="80"
+                placeholder="e.g. HP LaserJet Pro M404">
+            </div>
+
+            <div class="form-row">
+              <label for="message">Issue Description <span class="required-mark" aria-hidden="true">*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                minlength="10"
+                maxlength="1000"
+                placeholder="Describe the problem you are experiencing..."></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Consent</legend>
+
+            <div class="form-row checkbox-row">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label for="consent">I consent to Cedar3 Technology contacting me about this request. <span class="required-mark" aria-hidden="true">*</span></label>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="btn">Submit Support Request</button>
+        </form>
+        <div id="form-feedback" class="result-box" role="status" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Cedar3 Technology (Pty) Ltd. All rights reserved.</p>
+      <p>25 Birmingham Road, Benoni South, Johannesburg</p>
+      <p><a href="references.html">References</a></p>
+    </div>
+  </footer>
+</body>
+</html>

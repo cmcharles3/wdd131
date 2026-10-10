@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cedar3 Technology | IT Services, Networking & Equipment Repair</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts import (Montserrat & Open Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- SITE HEADER & NAVIGATION -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="brand">
+                <span class="logo-text">Cedar3<span class="highlight">Tech</span></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#quote">Request Quote</a></li>
+                    <li><a href="siteplan.html" target="_blank">Site Plan</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Reliable IT Infrastructure & Equipment Repair</h1>
+            <p>From enterprise printer diagnostics and hardware maintenance to robust networking setups, Cedar3 Technology keeps your business running smoothly.</p>
+            <div class="hero-buttons">
+                <a href="#quote" class="btn btn-primary">Request Diagnostic Service</a>
+                <a href="#services" class="btn btn-secondary">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="main-layout">
+        
+        <!-- SERVICES GRID SECTION -->
+        <section id="services" class="services-section">
+            <h2 class="section-title">Our Technical Services</h2>
+            <div class="services-grid">
+                
+                <div class="service-card">
+                    <div class="card-icon">🖨️</div>
+                    <h3>Printer & Copier Repair</h3>
+                    <p>Expert diagnostic and hardware repair for enterprise multi-function printers, plotters, and office copiers. We handle error codes, mechanical overhauls, and routine maintenance.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Networking & Infrastructure</h3>
+                    <p>Setup and optimization for routers, PoE switches, access points, and wireless bridges to ensure uninterrupted high-speed connectivity across your office site.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-icon">💻</div>
+                    <h3>IT Support & Maintenance</h3>
+                    <p>Proactive hardware maintenance, system troubleshooting, software configuration, and desktop support to minimize business downtime.</p>
+                </div>
+
+            </div>
+
+            <!-- DIAGNOSTICS & QUOTE REQUEST FORM -->
+            <div id="quote" class="quote-container">
+                <h2>Request a Technical Site Visit or Quote</h2>
+                <p>Have an equipment issue or networking project? Fill out the details below and a technician will follow up shortly.</p>
+                
+                <form class="quote-form" action="#" method="get">
+                    <div class="form-group">
+                        <label for="fullname">Full Name *</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="e.g. Jane Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="jane@company.co.za" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service-type">Service Required *</label>
+                        <select id="service-type" name="service-type" required>
+                            <option value="">-- Select a Service --</option>
+                            <option value="printer">Enterprise Printer / Copier Repair</option>
+                            <option value="networking">Networking Hardware & Wi-Fi Setup</option>
+                            <option value="support">General IT Maintenance / Troubleshooting</option>
+                            <option value="other">Other Consultation</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Issue / Equipment Details</label>
+                        <textarea id="description" name="description" rows="4" placeholder="Describe the printer model, error code, or network requirement..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Submit Quote Request</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- SIDEBAR SECTION -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3>Technical Diagnostics FAQ</h3>
+                <ul class="faq-list">
+                    <li>
+                        <strong>What printer error details should I provide?</strong>
+                        <p>Providing the exact make, model, and screen error code helps us bring the correct replacement parts on our first visit.</p>
+                    </li>
+                    <li>
+                        <strong>Do you offer on-site support?</strong>
+                        <p>Yes, we perform on-site technical diagnostics, network cabling assessments, and equipment maintenance.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-card highlight-box">
+                <h3>Need Immediate Assistance?</h3>
+                <p>Reach out directly for urgent enterprise printer or network line failures.</p>
+                <p class="contact-info"><strong>Email:</strong> support@cedar3tech.co.za</p>
+                <p class="contact-info"><strong>Hours:</strong> Mon - Fri: 08:00 - 17:00</p>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Cedar3 Technology. All rights reserved.</p>
+            <p>
+                <a href="siteplan.html">View Project Site Plan</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
