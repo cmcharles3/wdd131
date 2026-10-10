@@ -132,7 +132,7 @@ function writeStorage(key, value) {
    ========================================================= */
 
 /**
- * Initialise the "Client Welcome Portal" on the home page.
+ * I Initialised the "Client Welcome Portal" on the home page.
  * Uses localStorage to greet returning visitors by name and
  * to display how many times they've visited.
  */
@@ -149,7 +149,7 @@ function initVisitorPortal() {
 
   writeStorage(VISIT_KEY, newVisitCount);
 
-  // Build the message — conditionally.
+  /* Build the message — conditionally. */
   let greeting;
 
   if (newVisitCount === 1) {
@@ -160,7 +160,7 @@ function initVisitorPortal() {
     greeting = `Welcome back! You have visited ${newVisitCount} times.`;
   }
 
-  // Optional: if no name stored, prompt for one via a second line.
+  
   const nameLine = visitorName
     ? `We last saw you on ${formatDate(new Date())}.`
     : `Enter your name below and we will remember you next time.`;
@@ -170,7 +170,7 @@ function initVisitorPortal() {
     <span class="portal-sub">${nameLine}</span>
   `;
 
-  // Simple inline form for storing the visitor's name.
+  /* Simple inline form for storing the visitor's name. */
   if (!visitorName) {
     const nameInput = document.createElement('input');
     nameInput.type = 'text';
@@ -209,7 +209,7 @@ function initVisitorPortal() {
    ========================================================= */
 
 /**
- * Render an array of service objects into #services-container.
+ * An array of service objects into #services-container.
  * @param {Array} list
  */
 function renderServices(list) {
@@ -239,26 +239,26 @@ function renderServices(list) {
 }
 
 /**
- * Wire up the filter buttons on services.html.
- * Uses array.filter() to narrow the list.
+ * Wiring up the filter buttons on services.html.
+ * Using array.filter() to narrow the list.
  */
 function initServiceFilter() {
   const buttons = document.querySelectorAll('.filter-btn');
   const container = document.getElementById('services-container');
   if (!container || buttons.length === 0) return;
 
-  // Initial render.
+  /* Initial render. */
   renderServices(services);
 
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
       const filter = btn.dataset.filter; // 'all' | 'printer' | 'it' | 'maintenance'
 
-      // Update active state on buttons.
+      /* Updating active state on buttons. */
       buttons.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
 
-      // Conditional filter + array method.
+      /* Conditional filter + array method. */
       const filtered = filter === 'all'
         ? services
         : services.filter((svc) => svc.category === filter);
@@ -273,8 +273,8 @@ function initServiceFilter() {
    ========================================================= */
 
 /**
- * Map a service category to an estimated turnaround message.
- * Uses a switch to demonstrate conditional branching.
+ * Mapping a service category to an estimated turnaround message.
+ * Using a switch to demonstrate conditional branching.
  * @param {string} value
  * @returns {{ message: string, isError: boolean }}
  */
@@ -298,7 +298,7 @@ function estimateTurnaround(value) {
 }
 
 /**
- * Wire the estimator <select> on services.html.
+ * Wiring the estimator <select> on services.html.
  */
 function initEstimator() {
   const select = document.getElementById('estimator-select');
@@ -319,13 +319,13 @@ function initEstimator() {
     result.textContent = message;
     result.classList.add(isError ? 'error' : 'success');
 
-    // Save the last viewed service to localStorage.
+    /* Save the last viewed service to localStorage. */
     if (!isError) {
       writeStorage('cedar3.lastService', value);
     }
   });
 
-  // Restore last viewed service on page load.
+  /* Restoring last viewed service on page load. */
   const last = readStorage('cedar3.lastService', null);
   if (last) {
     select.value = last;
@@ -342,7 +342,7 @@ function initEstimator() {
    ========================================================= */
 
 /**
- * Validate a single form field.
+ * Validating a single form field.
  * Returns { valid: boolean, message: string }
  * @param {HTMLInputElement|HTMLTextAreaElement|HTMLSelectElement} field
  */
@@ -355,7 +355,7 @@ function validateField(field) {
   }
 
   if (name === 'email' && value !== '') {
-    // Simple pattern — HTML5 <input type="email"> is stricter, but this is a backup.
+    /* Simple pattern — HTML5 <input type="email"> is stricter, but this is a backup. */
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(value)) {
       return { valid: false, message: 'Please enter a valid email address.' };
@@ -374,7 +374,7 @@ function validateField(field) {
 }
 
 /**
- * Wire up the contact form on contact.html.
+ * Wiring up the contact form on contact.html.
  * Validates, stores the submission in localStorage, and shows feedback.
  */
 function initContactForm() {
@@ -390,19 +390,19 @@ function initContactForm() {
     const fields = form.querySelectorAll('input, textarea, select');
     const errors = [];
 
-    // Validate every field with .forEach (array-like NodeList).
+    /* Validating every field with .forEach (array-like NodeList). */
     fields.forEach((field) => {
       const { valid, message } = validateField(field);
       if (!valid) errors.push(message);
     });
 
-    // Consent checkbox needs its own check.
+    /* Consent checkbox needs its own check. */
     const consent = form.querySelector('#consent');
     if (consent && !consent.checked) {
       errors.push('Please tick the consent box before submitting.');
     }
 
-    // Conditional branch: show errors OR success.
+    /* Conditional branch: show errors OR success. */
     if (errors.length > 0) {
       feedback.classList.add('error');
       feedback.innerHTML = `
@@ -412,7 +412,7 @@ function initContactForm() {
       return;
     }
 
-    // Build a submission object from the form.
+    /* Building a submission object from the form. */
     const data = Object.fromEntries(new FormData(form).entries());
 
     // Add a timestamp.
@@ -421,28 +421,28 @@ function initContactForm() {
       submittedAt: new Date().toISOString()
     };
 
-    // Read existing submissions from localStorage.
+    /* Reading an existing submissions from localStorage. */
     const existing = readStorage('cedar3.submissions', []);
     existing.push(submission);
     writeStorage('cedar3.submissions', existing);
 
-    // Success message.
+    /* Success message. */
     feedback.classList.add('success');
     feedback.innerHTML = `
       <strong>Thank you, ${data.fullname}!</strong>
       <p>Your support request for <em>${data.device}</em> has been logged. We will contact you at <em>${data.email}</em> within one business day.</p>
     `;
 
-    // Remember the visitor's name for the home page portal.
+    /* Remember the visitor's name for the home page portal. */
     if (data.fullname) {
       writeStorage('cedar3.visitorName', data.fullname);
     }
 
-    // Reset the form.
+    /* Resetting the form. */
     form.reset();
   });
 
-  // Pre-fill the name field if we already know the visitor.
+  /* Pre-fill the name field if we already know the visitor. */
   const storedName = readStorage('cedar3.visitorName', null);
   const nameField = form.querySelector('#fullname');
   if (storedName && nameField && !nameField.value) {
@@ -455,7 +455,7 @@ function initContactForm() {
    ========================================================= */
 
 /**
- * Run all page-specific initialisers.
+ * Running all page-specific initialisers.
  * Each one exits quietly if its target element isn't on the page.
  */
 function init() {
