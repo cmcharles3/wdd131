@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Submit your product review for Cedar3 Technology products. Share your experience and rate the product.">
+    
     <title>Product Review Form</title>
+
+    <meta name="description" content="Thank you for submitting your product review. View your total completed reviews and return to submit another response for Cedar3 Technology.">
+    <meta name="author" content="Charles Chiparo">
 
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/form.js" defer></script>
@@ -26,23 +29,15 @@
             </div>
 
             <!-- Overall Rating -->
+            <!-- Overall Rating -->
             <fieldset class="form-item rating-group">
                 <legend>Overall Rating <span class="required">*</span></legend>
-                <div class="stars">
-                    <input type="radio" id="star5" name="rating" value="5" required>
-                    <label for="star5" title="5 stars">&#9733;</label>
-
-                    <input type="radio" id="star4" name="rating" value="4">
-                    <label for="star4" title="4 stars">&#9733;</label>
-
-                    <input type="radio" id="star3" name="rating" value="3">
-                    <label for="star3" title="3 stars">&#9733;</label>
-
-                    <input type="radio" id="star2" name="rating" value="2">
-                    <label for="star2" title="2 stars">&#9733;</label>
-
-                    <input type="radio" id="star1" name="rating" value="1">
-                    <label for="star1" title="1 star">&#9733;</label>
+                <div class="radio-options">
+                    <label><input type="radio" name="rating" value="1" required> 1 Star</label>
+                    <label><input type="radio" name="rating" value="2"> 2 Stars</label>
+                    <label><input type="radio" name="rating" value="3"> 3 Stars</label>
+                    <label><input type="radio" name="rating" value="4"> 4 Stars</label>
+                    <label><input type="radio" name="rating" value="5"> 5 Stars</label>
                 </div>
             </fieldset>
 

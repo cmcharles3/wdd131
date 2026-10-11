@@ -97,21 +97,19 @@ fieldset {
 }
 
 /* Star Rating Styling */
-.rating-group .stars {
+.rating-group .radio-options {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-.stars input[type="radio"] {
-  display: none;
-}
-
-.stars label {
-  font-size: 2rem;
-  color: var(--border-color);
+.rating-group label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   cursor: pointer;
-  transition: color 0.2s ease-in-out;
 }
 
 .stars input[type="radio"]:checked ~ label,
