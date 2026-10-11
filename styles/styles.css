@@ -1,0 +1,181 @@
+/* Color Scheme & Variables */
+:root {
+  --primary-color: #005f73;
+  --secondary-color: #0a9396;
+  --accent-color: #ee9b00;
+  --bg-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --text-color: #2b2d42;
+  --border-color: #cccccc;
+  --required-color: #d90429;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+main {
+  flex: 1;
+  max-width: 650px;
+  width: 90%;
+  margin: 2rem auto;
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-item {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label, legend {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.required {
+  color: var(--required-color);
+}
+
+.optional {
+  font-weight: normal;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--secondary-color);
+}
+
+fieldset {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Star Rating Styling */
+.rating-group .stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.stars input[type="radio"] {
+  display: none;
+}
+
+.stars label {
+  font-size: 2rem;
+  color: var(--border-color);
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.stars input[type="radio"]:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+  color: var(--accent-color);
+}
+
+/* Submit Button */
+.submit-btn, .btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover, .btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Confirmation Page Specifics */
+.confirmation-container {
+  text-align: center;
+}
+
+.counter-card {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: var(--bg-color);
+  border: 1px dashed var(--secondary-color);
+  border-radius: 8px;
+}
+
+.counter-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  main {
+    padding: 1.25rem;
+    width: 95%;
+  }
+
+  .stars label {
+    font-size: 1.75rem;
+  }
+}
