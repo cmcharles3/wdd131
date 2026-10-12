@@ -29,14 +29,15 @@
             </div>
 
             <!-- Overall Rating -->
+            <!-- Overall Rating -->
             <fieldset class="form-item rating-group">
                 <legend>Overall Rating <span class="required">*</span></legend>
-                <div class="radio-options">
-                    <label><input type="radio" name="rating" value="1" required> 1 Star</label>
-                    <label><input type="radio" name="rating" value="2"> 2 Stars</label>
-                    <label><input type="radio" name="rating" value="3"> 3 Stars</label>
-                    <label><input type="radio" name="rating" value="4"> 4 Stars</label>
-                    <label><input type="radio" name="rating" value="5"> 5 Stars</label>
+                <div class="rating-options" style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                    <label for="star1"><input type="radio" id="star1" name="rating" value="1" required> 1 Star</label>
+                    <label for="star2"><input type="radio" id="star2" name="rating" value="2" required> 2 Stars</label>
+                    <label for="star3"><input type="radio" id="star3" name="rating" value="3" required> 3 Stars</label>
+                    <label for="star4"><input type="radio" id="star4" name="rating" value="4" required> 4 Stars</label>
+                    <label for="star5"><input type="radio" id="star5" name="rating" value="5" required> 5 Stars</label>
                 </div>
             </fieldset>
 
